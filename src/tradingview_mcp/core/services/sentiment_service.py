@@ -15,6 +15,8 @@ import urllib.parse
 from datetime import datetime, timezone
 from typing import Optional
 
+from tradingview_mcp.core.services.proxy_manager import build_opener_with_proxy, is_proxy_configured
+
 # ─── Constants ────────────────────────────────────────────────────────────────
 
 _USER_AGENT = "tradingview-mcp/0.5.0 sentiment-bot"
@@ -50,7 +52,8 @@ def _fetch_reddit_posts(subreddit: str, query: str, limit: int = 10) -> list:
     )
     req = urllib.request.Request(url, headers={"User-Agent": _USER_AGENT})
     try:
-        with urllib.request.urlopen(req, timeout=_TIMEOUT) as resp:
+        opener = build_opener_with_proxy(_USER_AGENT)
+        with opener.open(req, timeout=_TIMEOUT) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             return data["data"]["children"]
     except Exception:

@@ -16,6 +16,7 @@ from tradingview_mcp.core.services.coinlist import load_symbols
 from tradingview_mcp.core.utils.validators import sanitize_timeframe, sanitize_exchange, EXCHANGE_SCREENER, ALLOWED_TIMEFRAMES, STOCK_EXCHANGES, is_stock_exchange, get_market_type
 from tradingview_mcp.core.services.sentiment_service import analyze_sentiment
 from tradingview_mcp.core.services.news_service import fetch_news_summary
+from tradingview_mcp.core.services.yahoo_finance_service import get_price, get_prices_bulk, get_market_snapshot
 
 try:
     from tradingview_ta import TA_Handler, get_multiple_analysis
@@ -2959,6 +2960,33 @@ def combined_analysis(symbol: str, exchange: str = "NASDAQ", timeframe: str = "1
             ),
         },
     }
+
+
+@mcp.tool()
+def yahoo_price(symbol: str) -> dict:
+    """Real-time price quote from Yahoo Finance for any stock, crypto, ETF or index.
+    Uses rotating residential proxy for reliable access.
+
+    Args:
+        symbol: Yahoo Finance symbol. Examples:
+                Stocks:  AAPL, TSLA, MSFT, NVDA, GOOGL
+                Crypto:  BTC-USD, ETH-USD, SOL-USD
+                ETFs:    SPY, QQQ, GLD
+                Indices: ^GSPC (S&P500), ^DJI (Dow Jones), ^IXIC (NASDAQ)
+                FX:      EURUSD=X, GBPUSD=X
+                Turkish: THYAO.IS, SASA.IS
+    """
+    return get_price(symbol)
+
+
+@mcp.tool()
+def market_snapshot() -> dict:
+    """Global market overview: major indices (S&P500, NASDAQ, Dow, VIX),
+    top crypto (BTC, ETH, SOL, BNB), FX rates, and key ETFs.
+    Powered by Yahoo Finance via rotating residential proxy.
+    """
+    return get_market_snapshot()
+
 
 if __name__ == "__main__":
 	main()
