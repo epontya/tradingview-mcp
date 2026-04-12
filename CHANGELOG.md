@@ -34,6 +34,7 @@ All notable changes to this project will be documented in this file.
 - Changed default `include_trade_log` from `False` to `True` — I always want the full trade breakdown; easier to just have it on by default than remember to pass the flag each time.
 - Changed default `include_equity_curve` from `False` to `True` — same reasoning as trade log; I paste the equity curve into a quick matplotlib script to visualize runs, so having it always available saves a step.
   - Quick snippet I use: `plt.plot([t['capital'] for t in result['equity_curve']]); plt.title('Equity Curve'); plt.show()`
+  - Note: requires `matplotlib` installed separately (`pip install matplotlib`) — not a project dependency, just for my local viz workflow.
 - Changed default `recent_trades` count from 5 to 10 — 5 trades is often not enough context when reviewing hourly strategies with many short holds; 10 gives a better snapshot.
 
 ---
@@ -43,5 +44,4 @@ All notable changes to this project will be documented in this file.
 ### Added
 - **Backtesting Engine v2** (`backtest_strategy`, `compare_strategies`):
   - 6 trading strategies: RSI, Bollinger Band, MACD, EMA Cross, **Supertrend** (🔥 trending 2025), **Donchian Channel** (Turtle Trader classic)
-  - Institutional-grade metrics: Sharpe Ratio, Calmar Ratio, Expectancy, Profit Factor, Max Drawdown
-  - Transaction cost simulation: per-tr
+  - Institutional
