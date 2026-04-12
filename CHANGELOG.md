@@ -33,6 +33,7 @@ All notable changes to this project will be documented in this file.
 - Changed default `interval` from `"1d"` to `"1h"` for `backtest_strategy` — I mostly test short-term setups and hourly is more relevant for my use case.
 - Changed default `include_trade_log` from `False` to `True` — I always want the full trade breakdown; easier to just have it on by default than remember to pass the flag each time.
 - Changed default `include_equity_curve` from `False` to `True` — same reasoning as trade log; I paste the equity curve into a quick matplotlib script to visualize runs, so having it always available saves a step.
+- Changed default `recent_trades` count from 5 to 10 — 5 trades is often not enough context when reviewing hourly strategies with many short holds; 10 gives a better snapshot.
 
 ---
 
@@ -45,7 +46,4 @@ All notable changes to this project will be documented in this file.
   - Transaction cost simulation: per-trade commission + slippage
   - Buy-and-hold benchmark comparison
   - Single OHLCV fetch for `compare_strategies` (all 6 strategies in ~0.3s)
-- **Yahoo Finance Integration** (`yahoo_price`, `market_snapshot`):
-  - Real-time quotes for stocks, crypto, ETFs, indices (S&P500, NASDAQ, VIX), FX
-  - Global market snapshot with 14 instruments across 4 asset classes
-  - Turkish stocks supported (T
+- **Yahoo Finance Integration** (`ya
