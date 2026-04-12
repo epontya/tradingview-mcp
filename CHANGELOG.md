@@ -31,6 +31,7 @@ All notable changes to this project will be documented in this file.
 - I changed the default `n_splits` for walk-forward backtesting from 5 to 3 in my local config — found 5 folds too slow on longer date ranges with hourly data.
 - Changed default `train_ratio` from 0.7 to 0.8 — I prefer more training data per fold when testing on crypto which tends to be noisier.
 - Changed default `interval` from `"1d"` to `"1h"` for `backtest_strategy` — I mostly test short-term setups and hourly is more relevant for my use case.
+- Changed default `include_trade_log` from `False` to `True` — I always want the full trade breakdown; easier to just have it on by default than remember to pass the flag each time.
 
 ---
 
@@ -50,8 +51,4 @@ All notable changes to this project will be documented in this file.
 - **Webshare Rotating Proxy Manager**:
   - 250 sticky sessions for rate-limit bypass
   - Direct-first + proxy-fallback architecture for reliability
-  - Zero-config for users (optional env-based configuration)
-- **Technical Indicators (pure Python, zero deps)**:
-  - ATR (Average True Range)
-  - Supertrend
-  - Donch
+  - Zero-conf
