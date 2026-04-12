@@ -29,6 +29,7 @@ All notable changes to this project will be documented in this file.
 
 ### Notes (personal)
 - I changed the default `n_splits` for walk-forward backtesting from 5 to 3 in my local config — found 5 folds too slow on longer date ranges with hourly data.
+- Changed default `train_ratio` from 0.7 to 0.8 — I prefer more training data per fold when testing on crypto which tends to be noisier.
 
 ---
 
@@ -56,9 +57,4 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - `compare_strategies` now fetches OHLCV once and runs all strategies on cached data (5x faster)
-- Yahoo Finance data fetching uses direct connection first, proxy fallback only on failure
-
-## [0.5.0] - 2026-03-29
-
-### Added
-- **Real-Time Market Sentiment (Agent-Reach Integration)**: Integrated
+- Yahoo Finance
