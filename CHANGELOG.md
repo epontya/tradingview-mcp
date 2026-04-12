@@ -32,6 +32,7 @@ All notable changes to this project will be documented in this file.
 - Changed default `train_ratio` from 0.7 to 0.8 — I prefer more training data per fold when testing on crypto which tends to be noisier.
 - Changed default `interval` from `"1d"` to `"1h"` for `backtest_strategy` — I mostly test short-term setups and hourly is more relevant for my use case.
 - Changed default `include_trade_log` from `False` to `True` — I always want the full trade breakdown; easier to just have it on by default than remember to pass the flag each time.
+- Changed default `include_equity_curve` from `False` to `True` — same reasoning as trade log; I paste the equity curve into a quick matplotlib script to visualize runs, so having it always available saves a step.
 
 ---
 
@@ -47,8 +48,4 @@ All notable changes to this project will be documented in this file.
 - **Yahoo Finance Integration** (`yahoo_price`, `market_snapshot`):
   - Real-time quotes for stocks, crypto, ETFs, indices (S&P500, NASDAQ, VIX), FX
   - Global market snapshot with 14 instruments across 4 asset classes
-  - Turkish stocks supported (THYAO.IS, SASA.IS...)
-- **Webshare Rotating Proxy Manager**:
-  - 250 sticky sessions for rate-limit bypass
-  - Direct-first + proxy-fallback architecture for reliability
-  - Zero-conf
+  - Turkish stocks supported (T
