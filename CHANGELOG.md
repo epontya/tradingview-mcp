@@ -30,6 +30,7 @@ All notable changes to this project will be documented in this file.
 ### Notes (personal)
 - I changed the default `n_splits` for walk-forward backtesting from 5 to 3 in my local config — found 5 folds too slow on longer date ranges with hourly data.
 - Changed default `train_ratio` from 0.7 to 0.8 — I prefer more training data per fold when testing on crypto which tends to be noisier.
+- Changed default `interval` from `"1d"` to `"1h"` for `backtest_strategy` — I mostly test short-term setups and hourly is more relevant for my use case.
 
 ---
 
@@ -53,8 +54,4 @@ All notable changes to this project will be documented in this file.
 - **Technical Indicators (pure Python, zero deps)**:
   - ATR (Average True Range)
   - Supertrend
-  - Donchian Channel
-
-### Changed
-- `compare_strategies` now fetches OHLCV once and runs all strategies on cached data (5x faster)
-- Yahoo Finance
+  - Donch
