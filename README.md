@@ -125,6 +125,11 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Personal Notes
+
+> I'm using this primarily to analyze crypto pairs on BINANCE and equity options on NASDAQ.
+> The `get_technical_analysis` tool with the `1h` interval has been most useful for my workflow.
+
 ## License
 
 [MIT](LICENSE)
