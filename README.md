@@ -87,6 +87,10 @@ Add the following to your `claude_desktop_config.json`:
 }
 ```
 
+> **Note:** On macOS, `claude_desktop_config.json` is located at
+> `~/Library/Application Support/Claude/claude_desktop_config.json`.
+> On Windows, it's at `%APPDATA%\Claude\claude_desktop_config.json`.
+
 ## Available Tools
 
 | Tool | Description |
