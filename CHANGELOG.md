@@ -36,6 +36,7 @@ All notable changes to this project will be documented in this file.
   - Quick snippet I use: `plt.plot([t['capital'] for t in result['equity_curve']]); plt.title('Equity Curve'); plt.show()`
   - Note: requires `matplotlib` installed separately (`pip install matplotlib`) — not a project dependency, just for my local viz workflow.
 - Changed default `recent_trades` count from 5 to 10 — 5 trades is often not enough context when reviewing hourly strategies with many short holds; 10 gives a better snapshot.
+- Changed default `initial_capital` from 10000 to 1000 — I test with smaller amounts closer to what I actually trade with; makes the output numbers feel more grounded and easier to sanity-check at a glance.
 
 ---
 
@@ -43,5 +44,4 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - **Backtesting Engine v2** (`backtest_strategy`, `compare_strategies`):
-  - 6 trading strategies: RSI, Bollinger Band, MACD, EMA Cross, **Supertrend** (🔥 trending 2025), **Donchian Channel** (Turtle Trader classic)
-  - Institutional
+  - 6 trading strate
