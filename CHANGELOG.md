@@ -36,5 +36,5 @@ All notable changes to this project will be documented in this file.
   - Quick snippet I use: `plt.plot([t['capital'] for t in result['equity_curve']]); plt.title('Equity Curve'); plt.show()`
   - Note: requires `matplotlib` installed separately (`pip install matplotlib`) — not a project dependency, just for my local viz workflow.
 - Changed default `recent_trades` count from 5 to 10 — 5 trades is often not enough context when reviewing hourly strategies with many short holds; 10 gives a better snapshot.
-- Changed default `initial_capital` from 10000 to 1000 — I test with smaller amounts closer to what I actually trade with; makes the output feel more grounded for my use case.
-- Changed default `commission` from 0.001 (0.1%) to 0.0025 (0.25%) — better reflects the fees I actually pay on the exchanges I use (Coinbase/Kraken); the original default was too optimistic for retail crypto trading.
+- Changed default `initial_capital` from 10000 to 1000 — I test with smaller amounts closer to what I actually trade with; makes the output feel more grounded.
+- Changed default `commission` from 0.001 (0.1%) to 0.0025 (0.25%) — better reflects the actual fees on the exchanges I use (Kraken/Coinbase); the original default was too optimistic for my workflow.
