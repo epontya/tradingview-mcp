@@ -129,4 +129,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 > I'm using this primarily to analyze crypto pairs on BINANCE and equity options on NASDAQ.
 > The `get_technical_analysis` tool with the `1h` interval has been most useful for my workflow.
-> My go-to symbols: `BTCUSDT` (BINANCE), `ETHUSDT` (BINANCE), `AAPL` (NASDAQ), `SPY` (AMEX).
+> My go-to symbols: `BINANCE:BTCUSDT`, `BINANCE:ETHUSDT`, `NASDAQ:AAPL`, `NASDAQ:TSLA`.
