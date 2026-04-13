@@ -128,6 +128,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Personal Notes
 
 > I'm using this primarily to analyze crypto pairs on BINANCE and equity options on NASDAQ.
-> The `get_technical_analysis` tool with the `1h` interval has been most useful for swing trade setups.
-> For crypto screening I typically use `BINANCE` as the exchange with `get_screener` — filters out a lot of noise
-> compared to scanning across all exchanges at once.
+> The `get_technical_analysis` tool with the `1h` interval has been most useful for my workflow.
+> My go-to symbols: `BTCUSDT` (BINANCE), `ETHUSDT` (BINANCE), `AAPL` (NASDAQ), `SPY` (AMEX).
