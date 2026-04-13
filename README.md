@@ -128,8 +128,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Personal Notes
 
 > I'm using this primarily to analyze crypto pairs on BINANCE and equity options on NASDAQ.
-> The `get_technical_analysis` tool with the `1h` interval has been most useful for my workflow.
-
-## License
-
-[MIT](LICENSE)
+> The `get_technical_analysis` tool with the `1h` interval has been most useful for identifying
+> entry points. I typically pair it with `get_history` using 200 candles to get a solid
+> picture of recent trend structure before making any decisions.
