@@ -128,5 +128,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## Personal Notes
 
 > I'm using this primarily to analyze crypto pairs on BINANCE and equity options on NASDAQ.
-> The `get_technical_analysis` tool with the `1h` interval has been most useful for my workflow.
-> My go-to symbols: `BTCUSDT` (BINANCE), `ETHUSDT` (BINANCE), `AAPL` (NASDAQ), `SPY` (AMEX).
+> The `get_technical_analysis` tool with the `1h` interval has been most useful for spotting
+> momentum shifts on BTC and ETH. I typically pair it with `get_history` using a `4h` interval
+> to confirm the broader trend before acting on any `1h` signal.
